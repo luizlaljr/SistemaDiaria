@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150292189-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-150292189-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cálculo de Diária</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+    <div class="header">
+        <h2>Cálculo de Diária</h2>          
+    </div>
+    <div class="container"> 
+        <div class="row_links">
+            <div class="col">
+                <div class="col col-2">
+                    <div class="links-container">
+                        <div class="unidades butn">
+                            <a href="diaria.html">Calculadora</a> 
+                        </div>
+                        <div class="unidades butn">
+                            <a href="unidades.html">Esquadrões</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="numberGen">Of. General</label>
+                        </div>
+                        <div class="input-text">
+                            <select name="numberGen" id="numberGen">
+                                <option value="0"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="numberSup">Of. Superior</label>
+                        </div>
+                        <div class="input-text">
+                            <select name="numberSup" id="numberSup">
+                                <option value="0"></option>
+                            </select>    
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="numberBas">Demais Of. e Graduados</label>
+                        </div>
+                        <div class="input-text">
+                            <select name="numberBas" id="numberBas">
+                                <option value="0"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="numberPra">Cabos, Soldados e Taifeiros</label>
+                        </div>
+                        <div class="input-text">
+                            <select name="numberPra" id="numberPra">
+                                <option value="0"></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="input-text">
+                            <input hidden-half-daily type="checkbox" name="isForeign" id="isForeign">
+                            <label for="isForeign">Último dia é Missão Acolhida ou retorno do Exterior?</label>
+                        </div>
+                    </div>
+                </div>
+                <div half-daily class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="dailyHalf">Localidade da Meia Diária</label>
+                        </div>
+                        <div class="input-text">
+                            <input type="text" name="dailyHalf" id="dailyHalf" maxlength="4" placeholder="Ex.: SBBR">
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>       
+        <div class="row">
+            <div class="col">
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="dateStart">Início da Missão</label>
+                        </div>
+                        <div class="input-text">
+                            <input type="date" name="dateStart" id="dateStart">
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="hourStart">Hora Início</label>
+                        </div>
+                        <div class="input-text">
+                            <input type="time" name="hourStart" id="hourStart"> (local)
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="dateEnd">Fim da Missão</label>
+                        </div>
+                        <div class="input-text">
+                            <input type="date" name="dateEnd" id="dateEnd">
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-2">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="hourEnd">Hora Fim</label>
+                        </div>
+                        <div class="input-text">
+                            <input type="time" name="hourEnd" id="hourEnd"> (local)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <step>
+        </step>
+        <div class="row">
+            <div class="col">              
+                <div class="button">
+                    <button onclick="includeStep()"><strong>+</strong></button>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col col-2">                       
+                <div class="flex-container">
+                    <div class="label-result">
+                        <h3><label for="label-result">Resultado</label></h3>
+                    </div>
+                    <div class="text-result">
+                        <h4><label for="result">R$ 0,00</label></h4>
+                    </div>                        
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="feedback">
+                    <div class="butn">
+                        <a href="https://form.jotformz.com/92893915435671">Formulário de Feedback</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="direitos">
+                    <span>Desenvolvido por Luiz Alberto - 1°/2°GT.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

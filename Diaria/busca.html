@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150292189-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-150292189-1');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Unidades</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+<body>
+    <div class="header">
+        <h2>Lista de Unidades</h2> 
+    </div>
+    <div class="container">
+        <div class="row_links">
+            <div class="col">
+                <div class="col col-2">
+                    <div class="links-container">
+                        <div class="unidades butn">
+                            <a href="diaria.html">Calculadora</a> 
+                        </div>
+                        <div class="unidades butn">
+                            <a href="unidades.html">Esquadrões</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="col col-4">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="posto">Todos</label>
+                        </div>
+                        <div class="input-text">
+                            <div class="links-container">
+                                <div class="butn">
+                                    <a href="12gt.php">Buscar Militares</a> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="col col-4">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="name">Círculo</label>
+                        </div>
+                        <div class="input-text">
+                            <input class="rdbtn" type="radio" name="circulo" id="oficial" value="oficial">Of.
+                            <input class="rdbtn" type="radio" name="circulo" id="praca" value="praca">Grd.
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="posto">Posto</label>
+                        </div>
+                        <div class="input-text">
+                            <select name="posto" id="posto">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="flex-container">
+                        <div class="label-text">
+                            <label for="name">Nome</label>
+                        </div>
+                        <div class="input-text busca">
+                            <select name="name" id="name">
+                                <option value=""></option>
+                            </select>
+                            <img id="loading" class="hidden" src="./img/loading.gif">
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4">
+                    <div class="links-container">
+                        <div class="butn">
+                            <a id="busca_militar" href="12gt.php?id=">Buscar Militar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <hr>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row">
+            <div class="col">
+                <div class="feedback">
+                    <div class="butn">
+                        <a href="https://form.jotformz.com/92893915435671">Formulário de Feedback</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="direitos">
+                    <span>Desenvolvido por Luiz Alberto - 1°/2°GT.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/script-busca.js"></script>
+</body>
+</html>
